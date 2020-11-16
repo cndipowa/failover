@@ -44,7 +44,7 @@ def resolve_dns_name_to_ip_address(dns_name, dns_server):
         sys.stderr.write("Following exception occured - {}. \n".format(err))
         return None
 
-def main()    
+def main():    
     parser = argparse.ArgumentParser(conflict_handler='resolve', description='Pass argument from command-line')
     parser.add_argument('--dns_server', type=str,  help='name or ip of the server to send DNS query to')
     parser.add_argument('--match', type=str, action='append', required=True, help='<path to file with value>=<glob pattern>') 
