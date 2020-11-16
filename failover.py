@@ -43,9 +43,8 @@ def resolve_dns_name_to_ip_address(dns_name, dns_server):
     except Exception as err:
         sys.stderr.write("Following exception occured - {}. \n".format(err))
         return None
-    
-    
-if __name__ == '__main__':
+
+def main()    
     parser = argparse.ArgumentParser(conflict_handler='resolve', description='Pass argument from command-line')
     parser.add_argument('--dns_server', type=str,  help='name or ip of the server to send DNS query to')
     parser.add_argument('--match', type=str, action='append', required=True, help='<path to file with value>=<glob pattern>') 
@@ -89,4 +88,7 @@ if __name__ == '__main__':
                     sys.stderr.write("No IP matching with reg ex pattern {} \n".format(pair[1]))
                     
     except Exception as e:
-        sys.stderr.write("Following exception occured - {}. \n".format(e))
+        sys.stderr.write("Following exception occured - {}. \n".format(e))    
+    
+if __name__ == '__main__':
+    main()
