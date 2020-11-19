@@ -1,2 +1,2 @@
 dnspython
-requests
+python-consul
