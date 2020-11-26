@@ -1,9 +1,10 @@
 from setuptools import setup
 
 setup(
-   name='failover',
-   version='1.0',
+   name='dcfailover',
+   version='0.0.1',
    description='Datacenter failover',
    py_modules=['failover'], 
    install_requires=['dnspython', 'python-consul'],
+   package_dir={'': 'failover'},
    )
